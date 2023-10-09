@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+
+    & header {
+        display: flex;
+        flex-direction: column;
+
+        & figure {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            align-items: center;
+
+            & img {
+                height: 40px;
+            }
+        }
+
+        & nav {
+            display: flex;
+            justify-content: end;
+            padding: 10px;
+            // background-color: black;
+
+            & ul {
+                display: flex;
+                gap: 20px;
+
+            }
+        }
+
+
+    }
+}
+
+.link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    // color: white;
+
+}
+
+.createUser {
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    width: 90%;
+    padding: 20px;
+
+    & form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 370px;
+        align-self: center;
+        border: 1px solid gray;
+        border-radius: 8px;
+        padding: 10px;
+
+        & label {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            & input {
+                height: 40px;
+                border-radius: 8px;
+                border: 1px solid gray;
+                outline: none;
+                padding-inline: 5px;
+            }
+        }
+        & select {
+            height: 30px;
+            outline: none;
+            border: none;
+            border-radius: 8px 8px 0 0;
+            padding-inline: 5px;
+            border: 1px solid gray;
+
+        }
+        & button {
+            height: 40px;
+            border-radius: 8px;
+            border: none;
+            width: 160px;
+            align-self: center;
+            margin-top: 10px;
+            background-color: green;
+            color: white;
+            cursor: pointer;
+        }
+    }
+
+}
