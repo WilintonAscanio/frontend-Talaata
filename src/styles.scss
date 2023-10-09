@@ -5,7 +5,6 @@
     padding: 0;
     box-sizing: content-box;
     font-family: 'Poppins', sans-serif;
-    color: black;
 }
 
 .home {
@@ -23,7 +22,7 @@
             align-items: center;
 
             & img {
-                height: 40px;
+                height: 30px;
             }
         }
 
@@ -31,7 +30,7 @@
             display: flex;
             justify-content: end;
             padding: 10px;
-            // background-color: black;
+            background-color: black;
 
             & ul {
                 display: flex;
@@ -50,8 +49,13 @@
     align-items: center;
     gap: 5px;
     font-size: 16px;
-    // color: white;
+    color: white;
+    padding: 5px;
 
+}
+
+.active {
+    border-bottom: 1px solid white;
 }
 
 .createUser {
