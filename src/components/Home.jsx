@@ -1,5 +1,5 @@
-import React from 'react'
-import { NavLink, Outlet } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { NavLink, Outlet, useNavigate } from 'react-router-dom'
 import { FiUserPlus } from 'react-icons/fi'
 import { AiOutlineFileSearch } from 'react-icons/ai'
 import { BsLinkedin } from 'react-icons/bs'
@@ -8,11 +8,17 @@ import { AiFillInstagram } from 'react-icons/ai'
 import { MdEmail } from 'react-icons/md'
 
 const Home = () => {
+    const navigate = useNavigate()
+    useEffect(() => {
+        navigate('/createuser')
+
+    }, [])
+
     return (
         <div className='home'>
             <header>
                 <figure>
-                    <img src="https://static.wixstatic.com/media/097be4_8731c6a9e9b4428a8d900156b2b5bbb3~mv2.png/v1/crop/x_0,y_10,w_1115,h_945/fill/w_109,h_93,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/097be4_8731c6a9e9b4428a8d900156b2b5bbb3~mv2.png" alt="icon" />
+                    <img src="https://static.wixstatic.com/media/097be4_f1fd6d0e9e3742b08973847fcfe16b24~mv2.png/v1/fill/w_80,h_68,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/097be4_f1fd6d0e9e3742b08973847fcfe16b24~mv2.png" alt="icon" />
 
                     <small>WILINTON ASCANIO TEST</small>
 
@@ -25,7 +31,7 @@ const Home = () => {
 
                 </nav>
             </header>
-                <Outlet />
+            <Outlet />
 
             <footer className='footer'>
                 <a href='https://www.linkedin.com/in/wilintonascanio/' target='_blank'><BsLinkedin /></a>

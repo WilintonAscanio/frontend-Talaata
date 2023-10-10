@@ -4,7 +4,7 @@ import { addUser } from '../services/addUser'
 import Swal from 'sweetalert2'
 
 const CreateUser = () => {
-  const [gender, setGender] = useState(null)
+  const [gender, setGender] = useState('M')
   const [emailError, setEmailError] = useState('');
   const [email, setEmail] = useState('')
   const { register, handleSubmit, reset, formState: { errors } } = useForm()
@@ -63,17 +63,17 @@ const CreateUser = () => {
   return (
     <div className='createUser'>
 
-      <h2>Crear nuevo usuario</h2>
+      <h2>CREAR USUARIO</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <label>
-          Documento
+          Documento *
           <input type="text" onKeyDown={handleKeyPress} placeholder='Ingrese el documento' {...register('Documento', {
             required: 'Este campo es requerido'
           })} />
         </label>
         {errors.Documento ? <span>{errors.Documento.message}</span> : ''}
         <label>
-          Nombre
+          Nombre *
           <input type="text" placeholder='Ingrese el nombre' {...register('Nombre', {
             required: 'Este campo es requerido'
           })} />
@@ -81,7 +81,7 @@ const CreateUser = () => {
         {errors.Nombre ? <span>{errors.Nombre.message}</span> : ''}
 
         <label>
-          Apellidos
+          Apellidos *
           <input type="text" placeholder='Ingrese los apellidos' {...register('Apellidos', {
             required: 'Este campo es requerido'
           })} />
@@ -89,7 +89,7 @@ const CreateUser = () => {
         {errors.Apellidos ? <span>{errors.Apellidos.message}</span> : ''}
 
         <label>
-          Teléfono
+          Teléfono *
           <input type="text" placeholder='Ingrese el teléfono' {...register('Telefono', {
             required: 'Este campo es requerido'
           })} />
@@ -97,31 +97,35 @@ const CreateUser = () => {
         {errors.Telefono ? <span>{errors.Telefono.message}</span> : ''}
 
         <label>
-          E-mail
+          E-mail *
           <input type="text" placeholder='Correo electrónico' onChange={validateEmail} />
         </label>
         {emailError ? <span>{emailError}</span> : ''}
 
         <label>
-          Dirección
+          Dirección *
           <input type="text" placeholder='Ingrese la dirección' {...register('Direccion', {
             required: 'Este campo es requerido'
           })} />
         </label>
         {errors.Direccion ? <span>{errors.Direccion.message}</span> : ''}
 
-        <section>
-          <label>
-            Masculino
-            <input type="radio" value='M' checked={gender === 'M'} onChange={handleGenderChange} />
+        <label>
+          Género *
+          <section>
 
-          </label>
-          <label>
+            <label>
+              Masculino
+              <input type="radio" value='M' checked={gender === 'M'} onChange={handleGenderChange} />
 
-            Femenino
-            <input type="radio" value='F' checked={gender === 'F'} onChange={handleGenderChange} />
-          </label>
-        </section>
+            </label>
+            <label>
+
+              Femenino
+              <input type="radio" value='F' checked={gender === 'F'} onChange={handleGenderChange} />
+            </label>
+          </section>
+        </label>
 
 
 

@@ -56,7 +56,7 @@ const GetUser = () => {
 
               </tr>) : <></>}</> :
             <>
-              {data.length ? data.map((user, index) =>
+              {data?.length ? data.map((user, index) =>
                 <tr key={index}>
                   <td>{user.employeeID}</td>
                   <td>{user.documento}</td>
@@ -72,7 +72,7 @@ const GetUser = () => {
 
         </tbody>
       </table>
-      <strong>{inputValue && !newArray.length ? 'Usuario no encontrado' : ''}</strong>
+      <strong>{inputValue && !newArray.length || !data ? 'Usuario no encontrado' : ''}</strong>
     </div>
   )
 }
