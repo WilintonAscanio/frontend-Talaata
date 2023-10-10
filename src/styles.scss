@@ -19,16 +19,22 @@
 .home {
     display: flex;
     flex-direction: column;
+    background-color: #D8D9DA;
+    min-height: 100vh;
+
 
     & header {
         display: flex;
         flex-direction: column;
+        background-color: #272829;
 
         & figure {
             display: flex;
             justify-content: space-between;
-            padding: 10px;
+            padding: 10px 20px;
             align-items: center;
+            color: #FFF6E0;
+
 
             & img {
                 height: 30px;
@@ -38,12 +44,13 @@
         & nav {
             display: flex;
             justify-content: end;
-            padding: 10px;
-            background-color: black;
+            padding: 10px 20px;
+            background-color: #61677A;
 
             & ul {
                 display: flex;
                 gap: 20px;
+                flex-wrap: wrap;
 
             }
         }
@@ -52,19 +59,20 @@
     }
 }
 
+
 .link {
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 5px;
     font-size: 16px;
-    color: white;
+    color: #FFF6E0;
     padding: 5px;
 
 }
 
 .active {
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #FFF6E0;
 }
 
 .createUser {
@@ -73,12 +81,14 @@
     margin: 5%;
     width: 90%;
     padding: 20px;
+    flex: 1;
+    gap: 20px;
 
     & form {
         display: flex;
         flex-direction: column;
         gap: 10px;
-        width: 370px;
+        width: 450px;
         align-self: center;
         border: 1px solid gray;
         border-radius: 8px;
@@ -91,6 +101,8 @@
             display: flex;
             flex-direction: column;
             gap: 5px;
+            color: #272829;
+            font-weight: 600;
 
             & input {
                 height: 40px;
@@ -98,6 +110,8 @@
                 border: 1px solid gray;
                 outline: none;
                 padding-inline: 5px;
+
+
             }
         }
 
@@ -118,9 +132,13 @@
             width: 160px;
             align-self: center;
             margin-top: 10px;
-            background-color: green;
-            color: white;
+            background-color: #61677A;
+            color: #FFF6E0;
             cursor: pointer;
+
+            &:hover {
+                background-color: #272829;
+            }
         }
 
         & section {
@@ -146,6 +164,8 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    flex: 1;
+
 
     & section {
         display: flex;
@@ -159,6 +179,9 @@
             border-radius: 8px;
             font-size: 16px;
             outline: none;
+            &:focus {
+                border: 1px solid #FFF6E0;
+            }
 
         }
     }
@@ -173,13 +196,38 @@
     th,
     td {
         padding: 10px;
-        border: 1px solid #ddd;
+        border: 1px solid #61677A;
+        text-align: center;
     }
 
     thead {
-        background-color: #f2f2f2;
+        background-color: #FFF6E0;
+    }
+    & strong {
+        text-align: center;
+        font-size: 1.5em;
     }
 
+
+}
+
+footer {
+    background-color: #272829;
+    height: 100px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+
+    & a {
+        display: flex;
+        align-items: center;
+        font-size: 35px;
+        cursor: pointer;
+        padding: 5px;
+        text-decoration: none;
+        color: white;
+
+    }
 
 }
 
@@ -189,5 +237,16 @@
     table {
         display: block;
         overflow-y: auto;
+    }
+}
+@media (max-width: 700px) {
+    .createUser {
+
+        justify-content: center;
+        padding: 0;
+        
+        & form {
+            width: 100%;
+        }
     }
 }

@@ -61,7 +61,7 @@ const CreateUser = () => {
 
   }
   return (
-    <article className='createUser'>
+    <div className='createUser'>
 
       <h2>Crear nuevo usuario</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -128,7 +128,7 @@ const CreateUser = () => {
         <button>CREAR USUARIO</button>
       </form>
 
-    </article>
+    </div>
   )
 }
 
