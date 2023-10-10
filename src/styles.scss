@@ -7,6 +7,15 @@
     font-family: 'Poppins', sans-serif;
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(144, 150, 144);
+    border-radius: 8px;
+}
+
 .home {
     display: flex;
     flex-direction: column;
@@ -74,6 +83,9 @@
         border: 1px solid gray;
         border-radius: 8px;
         padding: 10px;
+        color: black;
+
+
 
         & label {
             display: flex;
@@ -88,6 +100,7 @@
                 padding-inline: 5px;
             }
         }
+
         & select {
             height: 30px;
             outline: none;
@@ -97,6 +110,7 @@
             border: 1px solid gray;
 
         }
+
         & button {
             height: 40px;
             border-radius: 8px;
@@ -108,6 +122,72 @@
             color: white;
             cursor: pointer;
         }
+
+        & section {
+            display: flex;
+            justify-content: space-around;
+
+            & input {
+                height: 20px;
+            }
+        }
+
+        & span {
+            color: red;
+            font-size: 0.7em;
+        }
+
     }
 
+}
+
+.getUsers {
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    & section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & input {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+
+        }
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        white-space: nowrap;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        border: 1px solid #ddd;
+    }
+
+    thead {
+        background-color: #f2f2f2;
+    }
+
+
+}
+
+
+
+@media (max-width: 1000px) {
+    table {
+        display: block;
+        overflow-y: auto;
+    }
 }
